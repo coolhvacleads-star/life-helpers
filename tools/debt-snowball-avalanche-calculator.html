@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Debt Snowball vs Avalanche Calculator | Debt-Free Date</title><link rel="canonical" href="https://coolhvacleads-star.github.io/life-helpers/tools/debt-snowball-avalanche-calculator.html"><meta name="description" content="Free debt payoff calculator: compare the snowball and avalanche methods, see your debt-free date and total interest, month by month.">
+<meta property="og:title" content="Free Debt Snowball vs Avalanche Calculator | Debt-Free Date"><meta property="og:description" content="Free debt payoff calculator: compare the snowball and avalanche methods, see your debt-free date and total interest, month by month.">
+<link rel="stylesheet" href="../assets/style.css"></head><body class="">
+<header class="site"><div class="wrap"><p class="brand"><a href="../index.html">Life Helpers Inc.</a></p><nav><a href="../index.html">Home</a><a href="../index.html#tools">Free tools</a><a href="../products.html">Shop</a><a href="../kids/index.html">Kids science</a><a href="../free-printables.html">Freebies</a></nav></div></header>
+<div class="hero"><div class="wrap"><h1>Debt snowball vs avalanche calculator</h1><p>List your debts, add any extra you can pay each month, and compare your debt-free date and total interest both ways.</p></div></div><main class="wrap"><div class="card lift"><table id="debts"><thead><tr><th>Debt name</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum payment ($)</th><th></th></tr></thead><tbody></tbody></table>
+<div class="toolbar"><button class="btn small secondary" id="add">+ Add a debt</button></div>
+<div class="row"><div><label for="extra">Extra per month on top of minimums ($)</label><input id="extra" inputmode="decimal" value="100"></div></div>
+<div class="toolbar"><button class="btn" id="go">Compare</button></div><div id="out"></div></div><div class="disclaimer"><b>Not financial advice.</b> This is a calculator for the numbers you enter. Your lender's statements are the final word.</div><aside class="cta"><div><span class="tag">Want the full system?</span><h2>The Debt Payoff Planner</h2>
+<p>Enter your debts once and see your debt-free date both ways, smallest balance first or highest interest first, with total interest for each, month by month.</p><p class="note">Printable + fillable PDF + Excel/Sheets &middot; 12 pages &middot; instant download</p><p style="margin-top:14px"><a class="btn" data-buy="debt-payoff-planner" href="https://payhip.com/b/t4RmS" rel="noopener">Get it (<span data-price="debt-payoff-planner">$12</span>)</a></p></div>
+<div><img src="https://payhip.com/cdn-cgi/image/format=auto,width=640/https://pe56d.s3.amazonaws.com/o_1k3vdpaa6el5i8s1qedaalmf71d.png" alt="Preview of The Debt Payoff Planner" loading="lazy"></div></aside></main>
+<footer><div class="wrap"><p>Free tools do simple math on numbers you enter, in your browser. Nothing you type is sent anywhere. They are not legal, tax, financial, medical or veterinary advice.</p>
+<p class="contact">Questions: <a data-contact href="https://payhip.com/LifeHelpersInc" rel="noopener">contact us through our store</a></p>
+<p>&copy; Life Helpers Inc. Products are instant digital downloads for personal or own-business use.</p></div></footer>
+<script src="../assets/store-config.js"></script><script src="../assets/site.js"></script><script>function money(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}function num(el){var v=parseFloat(String(el.value).replace(/[$,%\s]/g,''));return isNaN(v)?0:v;}
+var tb=document.querySelector('#debts tbody');
+function addRow(n,b,a,m){var tr=document.createElement('tr');tr.innerHTML='<td><input value="'+(n||'')+'" aria-label="Name"></td><td><input inputmode="decimal" value="'+(b||'')+'" aria-label="Balance"></td><td><input inputmode="decimal" value="'+(a||'')+'" aria-label="APR"></td><td><input inputmode="decimal" value="'+(m||'')+'" aria-label="Minimum"></td><td><button class="btn small secondary" aria-label="Remove">&times;</button></td>';tr.querySelector('button').onclick=function(){tr.remove();};tb.appendChild(tr);}
+addRow('Credit card',3200,26.9,95);addRow('Car loan',8600,7.5,260);addRow('Store card',650,19.9,35);
+document.getElementById('add').onclick=function(){addRow();};
+function sim(debts,extra,order){var d=debts.map(function(x){return {n:x.n,b:x.b,r:x.a/1200,m:x.m,paid:0};});var month=0,interest=0,budget=d.reduce(function(s,x){return s+x.m;},0)+extra;
+ while(d.some(function(x){return x.b>0.005;})&&month<600){month++;d.forEach(function(x){if(x.b>0){var i=x.b*x.r;x.b+=i;interest+=i;}});
+  var left=budget;d.forEach(function(x){if(x.b>0){var p=Math.min(x.m,x.b);x.b-=p;left-=p;}});
+  var open=d.filter(function(x){return x.b>0.005;}).sort(order);for(var k=0;k<open.length&&left>0.005;k++){var p=Math.min(left,open[k].b);open[k].b-=p;left-=p;}
+  d.forEach(function(x){if(x.b<=0.005&&!x.paid){x.paid=month;x.b=0;}});}
+ return {month:month,interest:interest,never:month>=600,list:d};}
+function when(m){var t=new Date();t.setMonth(t.getMonth()+m);return t.toLocaleDateString(undefined,{month:'long',year:'numeric'});}
+document.getElementById('go').onclick=function(){var debts=[];tb.querySelectorAll('tr').forEach(function(tr){var i=tr.querySelectorAll('input');var b=num(i[1]);if(b>0)debts.push({n:i[0].value||'Debt',b:b,a:num(i[2]),m:num(i[3])});});
+ var out=document.getElementById('out');if(!debts.length){out.innerHTML='<p class="note">Add at least one debt with a balance.</p>';return;}
+ var ex=num(document.getElementById('extra'));
+ var s=sim(debts,ex,function(a,b){return a.b-b.b;}),v=sim(debts,ex,function(a,b){return b.r-a.r;});
+ function box(t,r){if(r.never)return '<div class="result"><b>'+t+'</b><p>At these payments the debts never get paid off (interest is bigger than the payments). Try a larger extra amount.</p></div>';
+  var rows=r.list.slice().sort(function(a,b){return a.paid-b.paid;}).map(function(x){return '<tr><td>'+x.n.replace(/</g,'&lt;')+'</td><td>month '+x.paid+' ('+when(x.paid)+')</td></tr>';}).join('');
+  return '<div class="result"><b>'+t+'</b><div class="big">Debt-free in '+r.month+' months</div><p>About <b>'+when(r.month)+'</b>. Total interest: <b>'+money(r.interest)+'</b></p><table><tr><th>Debt</th><th>Paid off</th></tr>'+rows+'</table></div>';}
+ var diff=s.never||v.never?'':'<p>Avalanche saves <b>'+money(Math.max(0,s.interest-v.interest))+'</b> in interest compared with snowball. Snowball pays off your first debt sooner, which keeps many people motivated.</p>';
+ out.innerHTML='<div class="row">'+box('Snowball (smallest balance first)',s)+box('Avalanche (highest APR first)',v)+'</div>'+diff+'<p class="note">Estimates only. Assumes fixed APRs, monthly compounding, no new charges, and freed-up minimums rolled into the next debt.</p>';};
+document.getElementById('go').click();</script></body></html>
