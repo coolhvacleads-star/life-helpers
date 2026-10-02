@@ -5,7 +5,7 @@
   document.querySelectorAll('[data-buy]').forEach(function (a) {
     var p = S.products[a.getAttribute('data-buy')];
     if (p && isSet(p.url)) { a.href = p.url; a.rel = 'noopener'; }
-    else { a.title = 'Store link not set yet (edit assets/store-config.js)'; }
+    else { a.textContent = 'Coming soon'; a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true'); a.style.opacity = '.6'; a.style.cursor = 'default'; }
   });
   document.querySelectorAll('[data-price]').forEach(function (el) {
     var p = S.products[el.getAttribute('data-price')]; if (p) el.textContent = p.price;
