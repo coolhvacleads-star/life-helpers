@@ -24,6 +24,9 @@ window.SITE = {
     "executor-first-90-days": {"url": "https://payhip.com/b/RisdY", "price": "$29"},
     "freelancer-year-end-q4-pack": {"url": "https://payhip.com/b/kRSUp", "price": "$9"},
     "holiday-away-pack": {"url": "https://payhip.com/b/AjFWv", "price": "$12"},
+    "before-i-forget": {"url": "https://payhip.com/b/je8Wi", "price": "$14"},
+    "hang-up-first": {"url": "https://payhip.com/b/e2Yxo", "price": "$12"},
+    "parent-pack": {"url": "https://payhip.com/b/ZtKqW", "price": "$22"},
     "muddler-busters-sink-or-float": {"url": "https://REPLACE-WITH-STORE-LINK/muddler-busters-sink-or-float", "price": "$6"},
     "why-vision-journal":            {"url": "https://REPLACE-WITH-STORE-LINK/why-vision-journal",            "price": "$7"},
     "bolts-build-lab":               {"url": "https://REPLACE-WITH-STORE-LINK/bolts-build-lab",               "price": "$8"}
