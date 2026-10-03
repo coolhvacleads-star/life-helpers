@@ -29,6 +29,12 @@ window.SITE = {
     "parent-pack": {"url": "https://payhip.com/b/ZtKqW", "price": "$22"},
     "muddler-busters-sink-or-float": {"url": "https://REPLACE-WITH-STORE-LINK/muddler-busters-sink-or-float", "price": "$6"},
     "why-vision-journal":            {"url": "https://REPLACE-WITH-STORE-LINK/why-vision-journal",            "price": "$7"},
-    "bolts-build-lab":               {"url": "https://REPLACE-WITH-STORE-LINK/bolts-build-lab",               "price": "$8"}
+    "bolts-build-lab":               {"url": "https://REPLACE-WITH-STORE-LINK/bolts-build-lab",               "price": "$8"},
+    "holiday-host-command-binder": {"url": "https://payhip.com/b/AMI6g", "price": "$9"},
+    "keep-the-power-on": {"url": "https://payhip.com/b/cQwIP", "price": "$15"},
+    "find-each-other": {"url": "https://payhip.com/b/lbMUw", "price": "$9"},
+    "turning-65-medicare-kit": {"url": "https://payhip.com/b/toX4j", "price": "$12"},
+    "divorce-financial-disclosure-organizer": {"url": "https://payhip.com/b/LNZ0Q", "price": "$19"},
+    "property-tax-appeal-evidence-kit": {"url": "https://payhip.com/b/wVsDy", "price": "$29"}
   }
 };
