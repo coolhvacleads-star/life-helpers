@@ -23,4 +23,4 @@ $('go').onclick=function(){var s=$('dd').value+'T'+($('dt').value||'16:00');var 
  rows.push(['Carve and serve',fmt(din)]);rows.push(['Leftovers in the fridge by (USDA 2-hour rule, counted from when the turkey comes out)',fmt(add(out,120))]);
  var h='<div class="result">'+($('fz').value==='f'?'<div class="big">Start thawing by '+fd(thaw)+'</div><p>'+lb+' lb needs about '+(daysMin===days?days:daysMin+' to '+days)+' days in the fridge.</p>':'<div class="big">Turkey in at '+fmt(inOven)+'</div>')+'</div>';
  h+='<table class="t"><tr><th>Step</th><th>When</th></tr>'+rows.map(function(r){return '<tr><td>'+r[0]+'</td><td><b>'+r[1]+'</b></td></tr>';}).join('')+'</table>';
- $('out').innerHTML=h;};$('go').click();</script></body></html>
+ $('out').innerHTML=h;};$('go').click();</script><script data-goatcounter="https://lifehelpers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
