@@ -32,4 +32,4 @@ document.getElementById('go').onclick=function(){var debts=[];tb.querySelectorAl
   return '<div class="result"><b>'+t+'</b><div class="big">Debt-free in '+r.month+' months</div><p>About <b>'+when(r.month)+'</b>. Total interest: <b>'+money(r.interest)+'</b></p><table><tr><th>Debt</th><th>Paid off</th></tr>'+rows+'</table></div>';}
  var diff=s.never||v.never?'':'<p>Avalanche saves <b>'+money(Math.max(0,s.interest-v.interest))+'</b> in interest compared with snowball. Snowball pays off your first debt sooner, which keeps many people motivated.</p>';
  out.innerHTML='<div class="row">'+box('Snowball (smallest balance first)',s)+box('Avalanche (highest APR first)',v)+'</div>'+diff+'<p class="note">Estimates only. Assumes fixed APRs, monthly compounding, no new charges, and freed-up minimums rolled into the next debt.</p>';};
-document.getElementById('go').click();</script></body></html>
+document.getElementById('go').click();</script><script data-goatcounter="https://lifehelpers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
