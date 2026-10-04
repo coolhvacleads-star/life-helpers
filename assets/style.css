@@ -54,5 +54,19 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0 40px;font
 .product h2{margin:0 0 6px}
 .product img{border-radius:10px;border:1px solid var(--line)}
 @media (max-width:720px){.hero h1{font-size:30px}.cta,.product{grid-template-columns:1fr}header.site a{margin-left:10px}}
+/* article pages (body.article): stacked content cards + product CTA */
+.article .card{margin-bottom:22px}.article .card.lift{margin-top:-36px}
+.article .card h2{margin:0 0 10px;font-size:26px}.article .card h2:not(:first-child){margin-top:26px}
+.article .card>:last-child{margin-bottom:0}.article .card p{font-size:16px}
+.article .card ol{margin:4px 0 14px;padding-left:24px;font-size:16px}.article .card ol li{padding:4px 0}.article .card ol li::marker{color:var(--brand);font-weight:700}
+.article .checklist label{font-size:16px}.article .toolbar{margin:16px 0 0}.article .toolbar+.note{margin:12px 0 0}
+.article .disclaimer{margin:0 0 22px}
+.article .cta{align-items:start;margin:34px 0 40px}.article .cta>div:first-child>p:not(.note):not(.buy){margin:0 0 10px}
+.article .cta ul{margin:0 0 12px;padding-left:20px}.article .cta li{padding:2px 0}
+.article .cta hr{border:0;border-top:1px solid var(--line);margin:22px 0 18px}.article .cta h3{margin:0 0 8px}.article .cta figure{margin:0}
+.buy{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 0}
+.article .seo-about h3{margin:22px 0 6px}.article .seo-about p{margin:0}
+header.site nav a{white-space:nowrap}
+@media (max-width:720px){.article .card h2{font-size:23px}.article .cta{padding:20px}.article .cta figure{order:-1}.article .cta .buy .btn{width:100%;text-align:center}.article .toolbar .btn{flex:1 1 100%;text-align:center}}
 @media print{header.site,.hero,footer,.cta,.toolbar,.noprint,.btn{display:none!important}body{background:#fff}.card{box-shadow:none}}
 .kids .hero h1{color:#fff}
