@@ -58,4 +58,4 @@ function pick(){
 $('#go').onclick=pick; $('#again').onclick=pick;
 $('#copy').onclick=()=>{if(!last.length)pick();const fu=$('#fu').checked;const t=($('#rt').textContent)+'\n\n'+last.map((x,i)=>(i+1)+'. '+x.q+(fu&&x.nx.length?'\n   Ask next: '+x.nx.join(' / '):'')).join('\n');
   (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>$('#status').textContent='Copied.',()=>$('#status').textContent='Copy did not work here. Use Print instead.');};
-</script></body></html>
+</script><script data-goatcounter="https://lifehelpers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
