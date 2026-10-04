@@ -36,4 +36,4 @@ document.getElementById('ics').onclick=function(){if(!dod.value){alert('Enter th
   L.push('BEGIN:VEVENT','UID:'+ph[0]+'-'+ymd(d)+'@life-helpers','DTSTAMP:'+now,'DTSTART;VALUE=DATE:'+ymd(d),'DTEND;VALUE=DATE:'+ymd(n),
    'SUMMARY:Check in: '+ph[1]+' steps','DESCRIPTION:A gentle reminder to look at the '+ph[1]+' checklist. Suggested pace only\\, not a legal deadline.','END:VEVENT');});
  L.push('END:VCALENDAR');var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([L.join('\r\n')],{type:'text/calendar'}));a.download='after-a-death-check-ins.ics';document.body.appendChild(a);a.click();a.remove();};
-render();</script></body></html>
+render();</script><script data-goatcounter="https://lifehelpers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
