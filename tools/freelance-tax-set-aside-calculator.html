@@ -16,4 +16,4 @@
 document.getElementById('go').onclick=function(){var i=num(inc),x=num(exp),p=num(pct)/100,per=document.getElementById('per').value;var profit=i-x,save=Math.max(0,profit*p);
  var extra=per==='12'?'<p>That is about <b>'+money(save/4)+'</b> per quarter, or <b>'+money(save/12)+'</b> per month.</p>':per==='1m'?'<p>Keep that pace and it is about <b>'+money(save*3)+'</b> per quarter.</p>':'';
  document.getElementById('out').innerHTML='<div class="result"><p>Profit (income minus expenses): <b>'+money(profit)+'</b></p><div class="big">Move '+money(save)+' to tax savings</div><p>You keep <b>'+money(profit-save)+'</b> to spend.</p>'+extra+'</div>';};
-var inc=document.getElementById('inc'),exp=document.getElementById('exp'),pct=document.getElementById('pct');document.getElementById('go').click();</script></body></html>
+var inc=document.getElementById('inc'),exp=document.getElementById('exp'),pct=document.getElementById('pct');document.getElementById('go').click();</script><script data-goatcounter="https://lifehelpers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
