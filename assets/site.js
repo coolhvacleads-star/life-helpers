@@ -11,7 +11,7 @@
     var p = S.products[el.getAttribute('data-price')]; if (p) el.textContent = p.price;
   });
   document.querySelectorAll('[data-newsletter]').forEach(function (a) {
-    if (isSet(S.newsletterUrl)) { a.href = S.newsletterUrl; a.rel = 'noopener'; }
+    if (isSet(S.newsletterUrl)) { a.href = S.newsletterUrl; a.target = '_blank'; a.rel = 'noopener'; }
     else { var box = a.closest('.cta') || a; box.style.display = 'none'; }
   });
   document.querySelectorAll('[data-contact]').forEach(function (el) {

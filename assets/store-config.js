@@ -9,7 +9,7 @@
 window.SITE = {
   "brand": "Life Helpers Inc.",
   "baseUrl": "https://coolhvacleads-star.github.io/life-helpers",
-  "newsletterUrl": "",
+  "newsletterUrl": "https://life-helpers-inc.kit.com/e830a530f4",
   "contactEmail": "",
   "contactUrl": "https://payhip.com/LifeHelpersInc",
   "products": {
@@ -35,6 +35,9 @@ window.SITE = {
     "find-each-other": {"url": "https://payhip.com/b/lbMUw", "price": "$9"},
     "turning-65-medicare-kit": {"url": "https://payhip.com/b/toX4j", "price": "$12"},
     "divorce-financial-disclosure-organizer": {"url": "https://payhip.com/b/LNZ0Q", "price": "$19"},
-    "property-tax-appeal-evidence-kit": {"url": "https://payhip.com/b/wVsDy", "price": "$29"}
+    "property-tax-appeal-evidence-kit": {"url": "https://payhip.com/b/wVsDy", "price": "$29"},
+    "group-chat-yearbook": {"url": "https://REPLACE-WITH-STORE-LINK/group-chat-yearbook", "price": "$12"},
+    "clocked-out-coloring": {"url": "https://REPLACE-WITH-STORE-LINK/clocked-out-coloring", "price": "$7"},
+    "golf-shame-ledger": {"url": "https://REPLACE-WITH-STORE-LINK/golf-shame-ledger", "price": "$7"}
   }
 };
