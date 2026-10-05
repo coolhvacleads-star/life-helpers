@@ -14,6 +14,18 @@
     if (isSet(S.newsletterUrl)) { a.href = S.newsletterUrl; a.target = '_blank'; a.rel = 'noopener'; }
     else { var box = a.closest('.cta') || a; box.style.display = 'none'; }
   });
+  if (isSet(S.newsletterUrl) && !document.querySelector('[data-newsletter]')) {
+    var foot = document.querySelector('footer .wrap');
+    if (foot) {
+      var p = document.createElement('p');
+      p.className = 'free-club';
+      var a = document.createElement('a');
+      a.setAttribute('data-newsletter', '');
+      a.href = S.newsletterUrl; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = 'Join the free club';
+      p.appendChild(a); foot.appendChild(p);
+    }
+  }
   document.querySelectorAll('[data-contact]').forEach(function (el) {
     if (S.contactEmail && S.contactEmail.indexOf('REPLACE') !== 0) { el.textContent = S.contactEmail; el.href = 'mailto:' + S.contactEmail; }
     else if (S.contactUrl) { el.textContent = 'contact us through our store'; el.href = S.contactUrl; el.rel = 'noopener'; }
