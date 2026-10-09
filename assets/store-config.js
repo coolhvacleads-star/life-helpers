@@ -10,7 +10,7 @@ window.SITE = {
   "brand": "Life Helpers Inc.",
   "baseUrl": "https://coolhvacleads-star.github.io/life-helpers",
   "newsletterUrl": "https://life-helpers-inc.kit.com/e830a530f4",
-  "contactEmail": "",
+  "contactEmail": "cool.hvac.leads@gmail.com",
   "contactUrl": "https://payhip.com/LifeHelpersInc",
   "products": {
     "landlord-move-out-kit":         {"url": "https://payhip.com/b/HuhmG",         "price": "$19"},
@@ -38,6 +38,10 @@ window.SITE = {
     "property-tax-appeal-evidence-kit": {"url": "https://payhip.com/b/wVsDy", "price": "$29"},
     "group-chat-yearbook": {"url": "https://REPLACE-WITH-STORE-LINK/group-chat-yearbook", "price": "$12"},
     "clocked-out-coloring": {"url": "https://REPLACE-WITH-STORE-LINK/clocked-out-coloring", "price": "$7"},
-    "golf-shame-ledger": {"url": "https://REPLACE-WITH-STORE-LINK/golf-shame-ledger", "price": "$7"}
+    "golf-shame-ledger": {"url": "https://REPLACE-WITH-STORE-LINK/golf-shame-ledger", "price": "$7"},
+    "santa-letter-set": {"url": "https://payhip.com/b/RbIvf", "price": "$5"},
+    "christmas-gift-hunt": {"url": "https://payhip.com/b/TfOki", "price": "$7"},
+    "christmas-party-game-pack": {"url": "https://payhip.com/b/Z9Vfp", "price": "$8"},
+    "holiday-host-bundle": {"url": "https://payhip.com/b/KR4ZJ", "price": "$14"}
   }
 };
